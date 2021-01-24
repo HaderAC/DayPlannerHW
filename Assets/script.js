@@ -45,9 +45,13 @@ $(document).ready(function () {
         var currentTime = moment().hour();
         //Function to go thru the timeblocks 
 
-        $(".time-block present").each(function () {
+        $(".time-block").each(function () {
+
+            // var timeBlock = parseInt($(this).attr("id").split("-")[1]);
 
             var timeBlock = parseInt($(this).attr("id").split("-")[1]);
+
+            // var timeBlock = parseInt($(this).attr("class"));
 
             if (timeBlock < currentTime) {
                 $(this).removeClass("future");
@@ -63,6 +67,8 @@ $(document).ready(function () {
                 $(this).removeClass("present");
                 $(this).removeClass("past");
                 $(this).addClass("future");
+
+                console.log(timeBlock);
 
             }
 
