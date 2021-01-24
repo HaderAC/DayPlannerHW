@@ -26,4 +26,16 @@ $(document).ready(function () {
         $("#hour-18 .description").val(localStorage.getItem("hour-18"));
     
     //This wil be the onclick on the save button
+
+    $(".saveBtn").on("click", function(){
+
+        var input = $(this).siblings(".description").val();
+        var timeBlock = $(this).parent().attr("id");
+
+    //Here we will save to local storage the users input and time of it
+
+    localStorage.setItem(timeBlock, input);
+    })
+
+    
 })
