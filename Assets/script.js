@@ -1,13 +1,13 @@
 // Variable is being declared for the current day
 var currentDay = moment().format("dddd, MMMM Do YYY, h:mm:ss a");
-
+$(document).ready(function () {
 //Selecting the current day id to display the current day and time
 
 $("#currentDay").text(currentDay);
 
 // Here is where the functionality of the scheduler goes
 
-$(document).ready(function () {
+
 
     // This will get the local storage fro the value of timeblock 6am to 6pm
 
